@@ -83,6 +83,7 @@ def _get_user():
 
 def _save_greeting(guestbook_name, author, content):
     # Save greeting to Firestore.
+    print('Saving greeting for guestbook {}'.format( guestbook_name))
     db.collection('guestbooks') \
         .document(guestbook_name) \
         .collection('greetings') \
@@ -96,6 +97,7 @@ def _save_greeting(guestbook_name, author, content):
 
 def _get_greetings(guestbook_name):
     # Fetch guestbook greetings from Firestore.
+    print('Fetching greetings for guestbook {}'.format(guestbook_name))
     greetings_stream = db \
         .collection('guestbooks') \
         .document(guestbook_name) \
