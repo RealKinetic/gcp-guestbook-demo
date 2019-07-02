@@ -1,0 +1,6 @@
+runtime: python37
+
+#automatic_scaling:
+#    min_instances: 1
+#inbound_services:
+#  - warmup
